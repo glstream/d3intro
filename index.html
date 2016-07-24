@@ -1,16 +1,28 @@
-<!DOCTYPE html>
 <html>
 <head>
+  <title>D3 in Action Chapter 1 - Example 2</title>
+  <meta charset="utf-8" />
 <script src="d3.js" type="text/JavaScript"></script>
-	<title>Hello World</title>
 </head>
+<style>
+#vizcontainer {
+  width: 200px;
+  height: 100px;
+  border: 1px gray solid;
+}
+</style>
 <body>
-<p> <h1> Intro D3 Testing</h1></p>
-<script>
-d3.select("#somediv")
-	.style("border", "5px darkgray dashed");
 
-	</script>
-
+<div id="vizcontainer">
+</div>
 </body>
+  <footer>
+    
+<script>
+  var someData = ["filler", "filler", "filler", "filler"];
+d3.select("body").selectAll("div").data(someData).enter().append("div").html("Wow").append("span").html("Even More Wow").style("font-weight", "900");
+
+</script>
+  </footer>
+
 </html>
