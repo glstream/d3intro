@@ -1,4 +1,4 @@
-function create SoccerViz() {
+function createSoccerViz() {
 	d3.csv("data/worldcup.csv"), function(data) {
 		overallTeamViz(data);
 	})
