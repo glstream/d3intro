@@ -1,40 +1,20 @@
 <html>
 <head>
-  <title>D3 in Action Chapter 1 - Example 1</title>
-  <script src="js/d3.js" type="text/javascript" ></script>
+  <title>D3 in Action Chapter 1 - Example 3</title>
   <meta charset="utf-8" />
+  <link type= "text/css" rel="stylesheet" href="css/style.css"/>
 </head>
-<style>
-svg {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border: 1px lightgray solid;
-}
-</style>
-<body>
-<p> made changes today </p>
-<div id="vizcontainer">
-<svg>
-  <g>
-<circle r="5"/>
-<text>A Label</text>
-</g>
-<g transform="translate(100,50)">
-<circle r="5" />
-<text>A Label</text>
-</g>
-<g transform="translate(100,400)scale(3.5)">
-<circle r="5"/>
-<text>A Label</text>
-</g>
-</svg>
+<script src ="js/d3.js" type="text/javascipt"></script>
+<script src ="js/colorbrewer.js" type="text/javascipt"></script>
+<script src ="js/soccorviz.js" type="text/javascipt"></script>
+
+<body onload="createScocerViz()">
+<div id= "viz">
+<svg style="width:500px;height:500px;border:1px lightgray solid;"/>
 </div>
+<div id ="controls"/>
+
+
+
 </body>
-  <footer>
-    
-<script>
-</script>
-  </footer>
- 
 </html>
