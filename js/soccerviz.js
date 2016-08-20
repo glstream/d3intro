@@ -6,7 +6,7 @@ function overallTeamViz(incomingData) {
 		d3.select("svg")
 			.append("g")
 			.attr("id", "teamsG")
-			.attr("transform", "tarnslate(50,300)")
+			.attr("transform", "translate(50,300)")
 			.selectAll("g")
 			.data(incomingData)
 			.enter()
