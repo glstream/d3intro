@@ -1,7 +1,7 @@
 function createSoccerViz() {
-	d3.csv("data/worldcup.csv"), function(data) {
+	d3.csv("data/worldcup.csv", function(data) {
 		overallTeamViz(data);
-	}
+	})
 function overallTeamViz(incomingData) {
 		d3.select("svg")
 			.append("g")
