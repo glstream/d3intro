@@ -45,12 +45,11 @@ function overallTeamViz(incomingData) {
 		var maxValue = d3.max(incomingData, function(d) {
 			return parseFloat(d[datapoint]);
 		});
-		var radiusScale = d3.scale.linear()
-			.domain([0,maxValue]).range([2,20]);
-		d3.selectAll("g.overallG").select("circle")
-			.attr("r", function(d){ return radiusScale(d[datapoint]);
-			});
+	var radiusScale = d3.scale.linear().domain([0,maxValue]).range([2,20]);
+ 	d3.selectAll("g.overallG")
+.select("circle")
+.attr("r", function(d) {return radiusScale(d[datapoint])})
 	};
-	
+
 	}
 }
