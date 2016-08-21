@@ -46,15 +46,9 @@ var maxValue = d3.max(incomingData,
 function(d) {return parseFloat(d[datapoint])
 });
 var radiusScale = d3.scale.linear().domain([0,maxValue]).range([2,20]);
-d3.selectAll("g.overallG").select("circle").transition().duration(1000).attr("r", function(d) {return radiusScale(d[datapoint])})
-}
-
-teamG.on("mouseover", highlightRegion);
-teamG.on("mouseout", function() {d3.selectAll("g.overallG").select("circle").style("fill", "pink")});
-
-function highlightRegion(d) {
- d3.selectAll("g.overallG").select("circle").style("fill", function(p) {return p.region == d.region ? "red" : "gray"})
-}
+ 	d3.selectAll("g.overallG")
+.select("circle")
+.attr("r", function(d) {return radiusScale(d[datapoint])})
 	};
 
 	}
